@@ -31,4 +31,8 @@ public class Student {
 
 	}
 
+	@Override public int hashCode() {
+		return this.perm ^ this.name.hashCode();
+	}
+
 }
