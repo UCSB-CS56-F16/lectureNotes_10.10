@@ -17,5 +17,18 @@ public class Student {
 		return this.perm + " " + this.name; 
 	}
 
+	@Override public boolean equals(Object o) {
+		// Start: boilerplate code for .equals
+		
+		if (this == o) return true;
+		if (o == null) return false;
+		if (getClass() != o.getClass()) return false;
+		Student s  = (Student) o;
+
+		// End boilerplate
+		
+		return this.perm == s.perm && this.name.equals(s.name);
+
+	}
 
 }
